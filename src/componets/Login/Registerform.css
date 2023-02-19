@@ -1,0 +1,4 @@
+.form-registere{
+  display: flex;
+  flex-direction: column;
+}
