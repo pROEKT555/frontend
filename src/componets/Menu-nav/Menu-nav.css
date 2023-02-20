@@ -1,0 +1,24 @@
+.Menu-test__ul{
+  display: flex;
+  justify-content: space-around;
+}
+.Menu{
+  background-color: #70798c;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.Menu-test__li{
+  color: #ffff;
+  text-decoration: none;
+  list-style: none;
+  background-color: #252323;
+  padding: 5px 10px;
+  border-radius: 5px;
+
+}
+.Menu-test__a{
+  text-decoration: none;
+  color: #ffff;
+}

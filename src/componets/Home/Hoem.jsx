@@ -1,7 +1,6 @@
-import Menunav from "../Menu-nav/Menunav";
 const Home = () =>{
   return(
-    <Menunav></Menunav>
+    <div></div>
   )
 }
 export default Home;

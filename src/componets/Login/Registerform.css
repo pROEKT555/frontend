@@ -1,4 +1,30 @@
-.form-registere{
+.form-registere__form{
   display: flex;
   flex-direction: column;
+  background-color: #dad2bc;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.form-registere{
+  padding-top: 45px;
+  display: flex;
+  justify-content: center;
+}
+.registere-form__control{
+  padding-bottom: 5px;
+}
+.registere-form__control label{
+  padding-right: 10px;
+  font-size: 24px;
+}
+.registere-form__input{
+  border: solid #000 1px;
+  border-radius: 5px;
+}
+.registere-form__actions__button{
+  color: #dad2bc;
+  padding: 5px 10px;
+  background-color: #A99985;
+  border: none;
+  border-radius: 5px;
 }
