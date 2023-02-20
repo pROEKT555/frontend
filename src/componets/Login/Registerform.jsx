@@ -1,5 +1,6 @@
 import React,{ useState } from "react";
 import "./Registerform.css"
+import axios from "axios";
 const Registerform = () =>{
   const[inputlogin,setInputlogin] = useState('');
   const[inputPassword,setInputPassword] = useState('')
@@ -7,6 +8,19 @@ const Registerform = () =>{
   const LoginChangeHendler = (event) =>{
     setInputlogin(event.target.value)
 
+  }
+  const postsend =(login,passworld,email)=>{
+    axios.post('http://localhost:8000/login/', {
+      login: login,
+      passworld: passworld,
+      email: email
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
   const PasswordChangeHendler = (event) =>{
     setInputPassword(event.target.value)
@@ -19,16 +33,9 @@ const Registerform = () =>{
   const submitHandler = (event) =>{
     event.preventDefault()
     if(inputlogin==='' || inputPassword==='' || inputEmail===""){
-      
       alert("Ведіть дані");
-      
     }else{
-      const costDate = {
-        login:inputlogin,
-        password:inputPassword,
-        email:inputEmail
-      };
-      console.log(costDate)
+      postsend(inputlogin,inputPassword,inputEmail)
       setInputlogin('')
       setInputPassword('')
       setInputEmai('')
