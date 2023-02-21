@@ -1,0 +1,51 @@
+.form-registere__form{
+  
+ 
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #dad2bc;
+  padding: 25px 50px;
+  border-radius: 10px;
+}
+.a-register-form{
+  padding-top: 15px;
+}
+.a-register-form__a{
+  text-decoration: none;
+  color: #000000a6;
+}
+.form-registere-title{
+  font-size: 30px;
+}
+.registere-form__control-1{
+  padding-top: 25px;
+}
+.form-registere{
+  padding-top: 45px;
+  display: flex;
+  justify-content: center;
+}
+.registere-form__control{
+  padding-bottom: 15px;
+  width: 300px;
+  height: 40px;
+}
+.registere-form__control label{
+  padding-right: 10px;
+  font-size: 24px;
+}
+.registere-form__input{
+  border: solid #000 1px;
+  border-radius: 5px;
+  width: 300px;
+  height: 40px;
+}
+.registere-form__actions__button{
+  color: #dad2bc;
+  padding: 10px 15px;
+  font-size: 25px;
+  background-color: #A99985;
+  border: none;
+  border-radius: 5px;
+}
