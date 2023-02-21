@@ -1,22 +1,23 @@
 import React,{ useState } from "react";
 import "./Loginform.css"
-// import axios from "axios";
+import axios from "axios";
 import { Link } from "react-router-dom";
 const Loginform = (props) =>{
   const[inputlogin,setInputlogin] = useState('');
   const[inputPassword,setInputPassword] = useState('')
-  // const postsend =(login,passworld)=>{
-  //   axios.post('http://localhost:8000/login/', {
-  //     login: login,
-  //     passworld: passworld
-  //   })
-  //   .then(function (response) {
-  //     console.log(response);
-  //   })
-  //   .catch(function (error) {
-  //     console.log(error);
-  //   });
-  // }
+  const postsend =(login,passworld)=>{
+    axios.post('http://localhost:8000/login/', {
+      login: login,
+      passworld: passworld,
+      email:"ccc@gma.com"
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
   const LoginChangeHendler = (event) =>{
     setInputlogin(event.target.value)
 
@@ -29,6 +30,7 @@ const Loginform = (props) =>{
   const submitHandler = (event) =>{
     event.preventDefault();
     props.setisLoggedIn(true);
+    postsend(inputlogin,inputPassword)
     // props.history.push('/');
   }
   return(
