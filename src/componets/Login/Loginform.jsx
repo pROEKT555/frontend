@@ -17,7 +17,8 @@ const Loginform = (props) =>{
       console.log(response.data.has_user_found,response.data.passworld_is_correct)
       if(response.data.has_user_found===true && response.data.passworld_is_correct===true){
         props.setisLoggedIn(true)
-        props.setisName(login)
+        props.setisName(response.data.name)
+        props.setisEmail(response.data.email)
         navigate("/kabinet")
       }else{
         props.setisLoggedIn(false)

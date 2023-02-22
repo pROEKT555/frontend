@@ -8,6 +8,7 @@ import { Route,Routes} from "react-router-dom";
 function App() {
   const[isLoggedIn,setisLoggedIn] = useState(false);
   const[isName,setisName] = useState("");
+  const[isEmail,setisEmail] = useState("");
 
   return (
      <div>
@@ -15,9 +16,9 @@ function App() {
       <Menunav isLoggedIn={isLoggedIn}/>
       <Routes>
         <Route exact path='/' element={<Home ></Home>}/>
-        <Route exact path='/login' element={<Loginform setisLoggedIn={setisLoggedIn} setisName={setisName}></Loginform>}/>
+        <Route exact path='/login' element={<Loginform setisLoggedIn={setisLoggedIn} setisName={setisName} setisEmail={setisEmail}></Loginform>}/>
         <Route exact path='/register' element={<Registerform ></Registerform>}/>
-        <Route exact path='/kabinet' element={<Kabinet isLoggedIn={isLoggedIn} isName={isName}></Kabinet>}/>
+        <Route exact path='/kabinet' element={<Kabinet isEmail={isEmail} isLoggedIn={isLoggedIn} isName={isName}></Kabinet>}/>
 
       </Routes>
     </div>
