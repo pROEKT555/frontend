@@ -20,7 +20,7 @@ const Kabinet =(props) =>{
               name {props.isName}
             </div>
             <div className="Kabinet-datauser-gmail">
-              name {props.isEmail}
+              email {props.isEmail}
             </div>
             <div className="Kabinet-datauser-editprofil">
               <Link>Редагувати профіль</Link>
