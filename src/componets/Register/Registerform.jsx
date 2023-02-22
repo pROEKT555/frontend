@@ -37,7 +37,7 @@ const Registerform = () =>{
   }
   const submitHandler = (event) =>{
     event.preventDefault()
-    if(inputlogin==='' && inputPassword==='' && inputEmail==="" && inputPassword!=inputaceptPassword){
+    if(inputlogin==='' && inputPassword==='' && inputEmail==="" && inputPassword!==inputaceptPassword){
       alert("Ведіть дані");
     }else{
       postsend(inputlogin,inputPassword,inputEmail)
