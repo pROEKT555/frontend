@@ -1,18 +1,27 @@
 import React,{ useState } from "react";
 import "./Loginform.css"
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
 const Loginform = (props) =>{
   const[inputlogin,setInputlogin] = useState('');
   const[inputPassword,setInputPassword] = useState('')
+  const navigate = useNavigate();
   const postsend =(login,passworld)=>{
+    
     axios.post('http://localhost:8000/login/', {
       login: login,
-      passworld: passworld,
-      email:"ccc@gma.com"
+      passworld: passworld
     })
     .then(function (response) {
-      console.log(response);
+      if(response.data.has_user_found===true){
+        props.setisLoggedIn(true)
+        props.setisName(login)
+        navigate("/kabinet")
+      }else{
+        props.setisLoggedIn(false)
+      }
+      console.log(response.data.has_user_found);
     })
     .catch(function (error) {
       console.log(error);
@@ -29,7 +38,7 @@ const Loginform = (props) =>{
 
   const submitHandler = (event) =>{
     event.preventDefault();
-    props.setisLoggedIn(true);
+
     postsend(inputlogin,inputPassword)
     // props.history.push('/');
   }

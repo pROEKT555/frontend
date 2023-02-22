@@ -10,7 +10,7 @@ const Registerform = () =>{
 
   }
   const postsend =(login,passworld,email)=>{
-    axios.post('http://localhost:8000/login/', {
+    axios.post('http://localhost:8000/register/', {
       login: login,
       passworld: passworld,
       email: email
