@@ -7,19 +7,6 @@ const Registerform = () =>{
   const[inputaceptPassword,setaceptPassword] = useState('')
   const[inputEmail,setInputEmai] = useState('')
 
-  const postsend =(login,passworld,email)=>{
-    axios.post('http://localhost:8000/register/', {
-      login: login,
-      passworld: passworld,
-      email: email
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-  }
   const LoginChangeHendler = (event) =>{
     setInputlogin(event.target.value)
   }
@@ -37,13 +24,33 @@ const Registerform = () =>{
   }
   const submitHandler = (event) =>{
     event.preventDefault()
-    if(inputlogin==='' && inputPassword==='' && inputEmail==="" && inputPassword!==inputaceptPassword){
-      alert("Ведіть дані");
+    if(inputlogin===''){
+      alert("Ведіть логін");
+    }else if(inputPassword==='' ){
+      alert("Ведіть пароль");
+    }else if(inputEmail===""){
+      alert("Ведіть пошту");
     }else{
-      postsend(inputlogin,inputPassword,inputEmail)
-      setInputlogin('')
-      setInputPassword('')
-      setInputEmai('')
+      axios.post('http://localhost:8000/register/', {
+        login: inputlogin,
+        passworld: inputPassword,
+        email: inputEmail
+      })
+      .then(function (response) {
+        console.log(response);
+        if(response.data.has_user!==true){
+          setInputlogin('')
+          setInputPassword('')
+          setInputEmai('')
+        }else{
+          alert("На дану пошту вже зареэстрований акаунт")
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+
     }
 
     };
