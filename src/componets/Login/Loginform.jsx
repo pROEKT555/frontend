@@ -14,13 +14,15 @@ const Loginform = (props) =>{
       passworld: passworld
     })
     .then(function (response) {
-      if(response.data.has_user_found===true){
+      console.log(response.data.has_user_found,response.data.passworld_is_correct)
+      if(response.data.has_user_found===true && response.data.passworld_is_correct===true){
         props.setisLoggedIn(true)
         props.setisName(login)
         navigate("/kabinet")
       }else{
         props.setisLoggedIn(false)
       }
+      console.log(response);
       console.log(response.data.has_user_found);
     })
     .catch(function (error) {
