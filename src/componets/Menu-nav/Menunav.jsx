@@ -9,7 +9,7 @@ const Menunav = (props) =>{
           <li className="Menu-test__li"><Link className="Menu-test__a" to="/">Menu</Link></li>
           <li className="Menu-test__li"><Link className="Menu-test__a" to="/login">Login</Link> </li>
           <li className="Menu-test__li"><Link className="Menu-test__a" to="/test">Test</Link></li>
-          <li className="Menu-test__li"><Link className="Menu-test__a" to="/addcont">add content</Link></li>
+          <li className="Menu-test__li"><Link className="Menu-test__a" to="/addcont">Сontent</Link></li>
         </ul>
       </nav>
     </div>
@@ -22,7 +22,7 @@ const Menunav = (props) =>{
           <li className="Menu-test__li"><Link className="Menu-test__a" to="/">Menu</Link></li>
           <li className="Menu-test__li"><Link className="Menu-test__a" to="/kabinet">Kabinet</Link> </li>
           <li className="Menu-test__li"><Link className="Menu-test__a" to="/test">Test</Link></li>
-          <li className="Menu-test__li"><Link className="Menu-test__a" to="/addcont">add content</Link></li>
+          <li className="Menu-test__li"><Link className="Menu-test__a" to="/addcont">Сontent</Link></li>
         </ul>
       </nav>
     </div>

@@ -4,11 +4,9 @@ import axios from "axios";
 const Registerform = () =>{
   const[inputlogin,setInputlogin] = useState('');
   const[inputPassword,setInputPassword] = useState('')
+  const[inputaceptPassword,setaceptPassword] = useState('')
   const[inputEmail,setInputEmai] = useState('')
-  const LoginChangeHendler = (event) =>{
-    setInputlogin(event.target.value)
 
-  }
   const postsend =(login,passworld,email)=>{
     axios.post('http://localhost:8000/register/', {
       login: login,
@@ -22,8 +20,15 @@ const Registerform = () =>{
       console.log(error);
     });
   }
+  const LoginChangeHendler = (event) =>{
+    setInputlogin(event.target.value)
+  }
   const PasswordChangeHendler = (event) =>{
     setInputPassword(event.target.value)
+
+  }
+  const PasswordaceptChangeHendler = (event) =>{
+    setaceptPassword(event.target.value)
 
   }
   const EmailChangeHendler = (event) =>{
@@ -32,7 +37,7 @@ const Registerform = () =>{
   }
   const submitHandler = (event) =>{
     event.preventDefault()
-    if(inputlogin==='' || inputPassword==='' || inputEmail===""){
+    if(inputlogin==='' && inputPassword==='' && inputEmail==="" && inputPassword!=inputaceptPassword){
       alert("Ведіть дані");
     }else{
       postsend(inputlogin,inputPassword,inputEmail)
@@ -60,6 +65,10 @@ const Registerform = () =>{
         <div className="registere-form__control">
           {/* <label>Ведіть пароль</label> */}
           <input placeholder="Ведіть пароль" className="registere-form__input" value={inputPassword} onChange={PasswordChangeHendler} type="password"></input> 
+        </div>
+        <div className="registere-form__control">
+          {/* <label>Ведіть пароль</label> */}
+          <input placeholder="Підтвердіть пароль" className="registere-form__input" value={inputaceptPassword} onChange={PasswordaceptChangeHendler} type="password"></input> 
         </div>
 
         
