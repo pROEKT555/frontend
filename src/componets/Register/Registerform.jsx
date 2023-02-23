@@ -2,16 +2,16 @@ import React,{ useState } from "react";
 import "./Registerform.css"
 import axios from "axios";
 const Registerform = () =>{
-  axios.post('/profiles', {
-    id: this.props.match.params.id,
-    // додаткові поля профілю
-  })
-    .then(response => {
-      console.log(response.data);
-    })
-    .catch(error => {
-      console.log(error);
-    });
+//   axios.post('/profiles', {
+//     id: this.props.match.params.id,
+//     // додаткові поля профілю
+//   })
+//     .then(response => {
+//       console.log(response.data);
+//     })
+//     .catch(error => {
+//       console.log(error);
+//     });
   const[inputlogin,setInputlogin] = useState('');
   const[inputPassword,setInputPassword] = useState('')
   const[inputaceptPassword,setaceptPassword] = useState('')
@@ -52,6 +52,7 @@ const Registerform = () =>{
           setInputlogin('')
           setInputPassword('')
           setInputEmai('')
+          setaceptPassword('')
         }else{
           alert("На дану пошту вже зареэстрований акаунт")
         }
