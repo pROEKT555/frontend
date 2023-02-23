@@ -1,5 +1,6 @@
 import React,{ useState } from "react";
 import "./Loginform.css"
+import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -18,7 +19,12 @@ const Loginform = (props) =>{
       if(response.data.has_user_found===true && response.data.passworld_is_correct===true){
         props.setisLoggedIn(true)
         props.setisName(response.data.name)
+        props.setispasword(passworld)
         props.setisEmail(response.data.email)
+        Cookies.set('User',response.data.name);
+        Cookies.set('email',response.data.email);
+        Cookies.set('pasword',passworld);
+
         navigate("/kabinet")
       }else{
         props.setisLoggedIn(false)

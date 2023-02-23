@@ -1,12 +1,26 @@
 import "./Kabinet.css";
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 import myPhoto from './Без названия.jfif';
 import { Link } from "react-router-dom";
 const Kabinet =(props) =>{
+  const navigate = useNavigate();
+  const leaveact =() =>{
+    
+    Cookies.set('User',undefined);
+    Cookies.set('email',undefined);
+    Cookies.set('pasword',undefined);
+    props.setisLoggedIn(false)
+
+
+    
+  }
   if(props.isLoggedIn===false){
+    navigate("/login")
     return(
-      <div>
-        Ви невійшли в акаунт
-      </div>
+    <div>
+      Ви не війшли в акаунт
+    </div>
     )
   }else if (props.isLoggedIn===true){
     return(
@@ -28,6 +42,9 @@ const Kabinet =(props) =>{
           </div>
           <div className="Kabinet-datauser-editprofil">
             <Link className="Kabinet-datauser-editprofil__a">Редагувати профіль</Link>
+          </div>
+          <div className="Kabinet-datauser-leave">
+            <Link className="Kabinet-datauser-editprofil__a" onClick={leaveact}>Вийти з акаута</Link>
           </div>
           <div className="Kabinet-datafile">
           </div>
