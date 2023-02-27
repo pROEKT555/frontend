@@ -6,6 +6,7 @@ import Loginform from "./componets/Login/Loginform";
 import Menunav from "./componets/Menu-nav/Menunav";
 import Cookies from "js-cookie";
 import Kabinet from "./componets/Kabinet/Kabinet";
+import Contentadd from "./componets/Content/Contentadd/Contentadd";
 import { Route,Routes} from "react-router-dom";
 function App() {
   console.log()
@@ -37,6 +38,7 @@ function App() {
         <Route exact path='/login' element={<Loginform setispasword={setispasword} setisLoggedIn={setisLoggedIn} setisName={setisName} setisEmail={setisEmail}></Loginform>}/>
         <Route exact path='/register' element={<Registerform ></Registerform>}/>
         <Route exact path='/kabinet' setisLoggedIn={setisLoggedIn} element={<Kabinet isEmail={isEmail} isLoggedIn={isLoggedIn} isName={isName}></Kabinet>}/>
+        <Route exact path='/contentadd' element={<Contentadd ></Contentadd>}/>
 
       </Routes>
     </div>
