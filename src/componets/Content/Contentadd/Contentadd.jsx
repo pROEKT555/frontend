@@ -30,6 +30,19 @@ const Contentadd = (props) =>{
       });
     }
 
+    
+    axios.post('http://127.0.0.1:8000/content/', { // беляха муха(мав бути мат) Я З ЦЕЮ ФОГНЬОЮ ДОВБАВСЯ 2 ДОВБАНИХ ДНЯ! А ЯК ОКАЗУЄТЬСЯ ТРЕБА БУЛО ПОСТАРИТИ ДОВБАНИЙ СЛЕШ(/) В КІНЦІ СИЛКИ! просто одні емоції немає слів! Але зато вже відправляє контент
+      author:authid,
+      name: name,
+      descript: description,
+      files:file
+    })
+    .then(function (response) {
+      console.log(response)
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
   const ContentnameChange =(event)=>{
     setInputContenname(event.target.value);
