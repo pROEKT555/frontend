@@ -57,7 +57,7 @@ const Contentadd = (props) =>{
     console.log(inputContenname,inputContedescription,inputContefile)
     event.preventDefault();
     console.log(props.isIdacaynt)
-    Sendcontent(props.isIdacaynt,inputContenname,inputContedescription,inputContefile)
+    Sendcontent(1,inputContenname,inputContedescription,inputContefile)
   }
   return (
     <div className="form-registere">
