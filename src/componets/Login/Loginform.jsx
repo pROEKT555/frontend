@@ -17,6 +17,8 @@ const Loginform = (props) =>{
     .then(function (response) {
       console.log(response.data.has_user_found,response.data.passworld_is_correct)
       if(response.data.has_user_found===true && response.data.passworld_is_correct===true){
+        console.log(response.data.id)
+        props.setisIdacaynt(response.data.id)
         props.setisLoggedIn(true)
         props.setisName(response.data.name)
         props.setispasword(passworld)

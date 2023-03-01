@@ -11,6 +11,7 @@ import { Route,Routes} from "react-router-dom";
 function App() {
   console.log()
   const[isLoggedIn,setisLoggedIn] = useState(false);
+  const[isIdacaynt,setisIdacaynt] = useState('');
   const[isName,setisName] = useState(Cookies.get('User'));
   const[isEmail,setisEmail] = useState(Cookies.get('email'));
   const[ispasword,setispasword] = useState(Cookies.get('pasword'));
@@ -35,10 +36,10 @@ function App() {
       <Menunav isLoggedIn={isLoggedIn}/>
       <Routes>
         <Route exact path='/' element={<Home ></Home>}/>
-        <Route exact path='/login' element={<Loginform setispasword={setispasword} setisLoggedIn={setisLoggedIn} setisName={setisName} setisEmail={setisEmail}></Loginform>}/>
+        <Route exact path='/login' element={<Loginform setisIdacaynt={setisIdacaynt} setispasword={setispasword} setisLoggedIn={setisLoggedIn} setisName={setisName} setisEmail={setisEmail}></Loginform>}/>
         <Route exact path='/register' element={<Registerform ></Registerform>}/>
         <Route exact path='/kabinet' setisLoggedIn={setisLoggedIn} element={<Kabinet isEmail={isEmail} isLoggedIn={isLoggedIn} isName={isName}></Kabinet>}/>
-        <Route exact path='/contentadd' element={<Contentadd ></Contentadd>}/>
+        <Route exact path='/contentadd' element={<Contentadd isIdacaynt={isIdacaynt} ></Contentadd>}/>
 
       </Routes>
     </div>

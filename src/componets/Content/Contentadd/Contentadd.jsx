@@ -1,24 +1,35 @@
 import "./Contentadd.css"
 import axios from "axios";
 import { useState } from "react";
-const Contentadd = () =>{
+const Contentadd = (props) =>{
+  console.log(props.isIdacaynt)
   const[inputContenname,setInputContenname] = useState('');
   const[inputContedescription,setInputContedescription] = useState('')
   const[inputContefile,setInputContefile] = useState('')
   const Sendcontent =(authid,name,description,file)=>{
-    
-    axios.post('http://127.0.0.1:8000/content', {
-      author:authid,
-      name: name,
-      descript: description,
-      files:file
-    })
-    .then(function (response) {
-      console.log(response)
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+    if(authid ==='' ){
+      alert('Ви не авторізувалися')
+    }else if( name ===''){
+      alert('Ви невели назву контенту')
+    }else if(description ==='' ){
+      alert("Ви невели опис контенту")
+    }else if(file ===''){
+      alert('Ви неприкріпили файл')
+    }else{
+      axios.post('http://127.0.0.1:8000/content/', {
+        author:authid,
+        name: name,
+        descript: description,
+        files:file
+      })
+      .then(function (response) {
+        console.log(response)
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+
   }
   const ContentnameChange =(event)=>{
     setInputContenname(event.target.value);
@@ -32,7 +43,8 @@ const Contentadd = () =>{
   const submitHandler = (event) =>{
     console.log(inputContenname,inputContedescription,inputContefile)
     event.preventDefault();
-    Sendcontent(1,inputContenname,inputContedescription,inputContefile)
+    console.log(props.isIdacaynt)
+    Sendcontent(props.isIdacaynt,inputContenname,inputContedescription,inputContefile)
   }
   return (
     <div className="form-registere">
