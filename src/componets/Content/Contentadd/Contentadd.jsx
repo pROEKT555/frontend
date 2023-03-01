@@ -3,9 +3,9 @@ import axios from "axios";
 import { useState } from "react";
 const Contentadd = (props) =>{
   console.log(props.isIdacaynt)
-  const[inputContenname,setInputContenname] = useState('');
-  const[inputContedescription,setInputContedescription] = useState('')
-  const[inputContefile,setInputContefile] = useState('')
+  const[inputContenname,setInputContenname] = useState("");
+  const[inputContedescription,setInputContedescription] = useState("")
+  const[inputContefile,setInputContefile] = useState("")
   const Sendcontent =(authid,name,description,file)=>{
     if(authid ==='' ){
       alert('Ви не авторізувалися')
@@ -56,8 +56,7 @@ const Contentadd = (props) =>{
   const submitHandler = (event) =>{
     console.log(inputContenname,inputContedescription,inputContefile)
     event.preventDefault();
-    console.log(props.isIdacaynt)
-    Sendcontent(1,inputContenname,inputContedescription,inputContefile)
+    Sendcontent(props.isIdacaynt,inputContenname,inputContedescription,inputContefile)
   }
   return (
     <div className="form-registere">

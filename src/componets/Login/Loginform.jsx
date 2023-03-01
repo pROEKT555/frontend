@@ -23,6 +23,7 @@ const Loginform = (props) =>{
         props.setisName(response.data.name)
         props.setispasword(passworld)
         props.setisEmail(response.data.email)
+        Cookies.set("id",response.data.id)
         Cookies.set('User',response.data.name);
         Cookies.set('email',response.data.email);
         Cookies.set('pasword',passworld);

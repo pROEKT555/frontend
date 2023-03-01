@@ -11,7 +11,7 @@ import { Route,Routes} from "react-router-dom";
 function App() {
   console.log()
   const[isLoggedIn,setisLoggedIn] = useState(false);
-  const[isIdacaynt,setisIdacaynt] = useState('');
+  const[isIdacaynt,setisIdacaynt] = useState(Cookies.get('id'));
   const[isName,setisName] = useState(Cookies.get('User'));
   const[isEmail,setisEmail] = useState(Cookies.get('email'));
   const[ispasword,setispasword] = useState(Cookies.get('pasword'));

@@ -10,6 +10,7 @@ const Kabinet =(props) =>{
     Cookies.set('User',undefined);
     Cookies.set('email',undefined);
     Cookies.set('pasword',undefined);
+    Cookies.set("id",undefined)
     props.setisLoggedIn(false)
 
 
