@@ -6,6 +6,10 @@
 .conteiner{
   margin: 0 50px;
 }
+.content-visit{
+  margin-top: 25px;
+  display: flex;
+}
 .content-add{
   margin-top: 25px;
   display: flex;
