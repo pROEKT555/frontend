@@ -41,7 +41,7 @@ function App() {
         <Route exact path='/login' element={<Loginform setisIdacaynt={setisIdacaynt} setispasword={setispasword} setisLoggedIn={setisLoggedIn} setisName={setisName} setisEmail={setisEmail}></Loginform>}/>
         <Route exact path='/register' element={<Registerform ></Registerform>}/>
         <Route exact path='/kabinet' setisLoggedIn={setisLoggedIn} element={<Kabinet isEmail={isEmail} isLoggedIn={isLoggedIn} isName={isName}></Kabinet>}/>
-        <Route exact path='/contentadd' element={<Contentadd isIdacaynt={isIdacaynt} ></Contentadd>}/>
+        <Route exact path='/contentadd'  isLoggedIn={isLoggedIn} element={<Contentadd isIdacaynt={isIdacaynt} ></Contentadd>}/>
 
       </Routes>
     </div>

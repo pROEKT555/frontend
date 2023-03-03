@@ -2,12 +2,13 @@ import "./Contentadd.css"
 import axios from "axios";
 import { useState } from "react";
 const Contentadd = (props) =>{
+
   console.log(props.isIdacaynt)
   const[inputContenname,setInputContenname] = useState("");
   const[inputContedescription,setInputContedescription] = useState("")
   const[inputContefile,setInputContefile] = useState("")
   const Sendcontent =(authid,author_name,name,description,file)=>{
-    if(authid ==='' ){
+    if(authid ==='undefined' ){
       alert('Ви не авторізувалися')
     }else if( name ===''){
       alert('Ви невели назву контенту')
@@ -31,20 +32,6 @@ const Contentadd = (props) =>{
         console.log(error);
       });
     }
-
-    
-    axios.post('http://127.0.0.1:8000/content/', { // беляха муха(мав бути мат) Я З ЦЕЮ ФОГНЬОЮ ДОВБАВСЯ 2 ДОВБАНИХ ДНЯ! А ЯК ОКАЗУЄТЬСЯ ТРЕБА БУЛО ПОСТАРИТИ ДОВБАНИЙ СЛЕШ(/) В КІНЦІ СИЛКИ! просто одні емоції немає слів! Але зато вже відправляє контент
-      author:authid,
-      name: name,
-      descript: description,
-      files:file
-    })
-    .then(function (response) {
-      console.log(response)
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
   }
   const ContentnameChange =(event)=>{
     setInputContenname(event.target.value);
