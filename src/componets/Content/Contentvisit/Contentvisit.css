@@ -1,0 +1,22 @@
+.Contentvisit{
+  display: flex;
+  background-color: #dad2bc;
+  
+}
+.conteiner{
+  margin: 0 50px;
+}
+.content-add{
+  margin-top: 25px;
+  display: flex;
+  align-content: left;
+  justify-content: left;
+}
+.content-add__Link{
+  color: #dad2bc;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 20px;
+  background-color: #A99985;
+}

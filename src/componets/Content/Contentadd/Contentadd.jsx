@@ -6,7 +6,7 @@ const Contentadd = (props) =>{
   const[inputContenname,setInputContenname] = useState("");
   const[inputContedescription,setInputContedescription] = useState("")
   const[inputContefile,setInputContefile] = useState("")
-  const Sendcontent =(authid,name,description,file)=>{
+  const Sendcontent =(authid,author_name,name,description,file)=>{
     if(authid ==='' ){
       alert('Ви не авторізувалися')
     }else if( name ===''){
@@ -16,8 +16,10 @@ const Contentadd = (props) =>{
     }else if(file ===''){
       alert('Ви неприкріпили файл')
     }else{
+      console.log(author_name);
       axios.post('http://127.0.0.1:8000/content/', {
         author:authid,
+        author_name:author_name,
         name: name,
         descript: description,
         files:file
@@ -56,7 +58,7 @@ const Contentadd = (props) =>{
   const submitHandler = (event) =>{
     console.log(inputContenname,inputContedescription,inputContefile)
     event.preventDefault();
-    Sendcontent(props.isIdacaynt,inputContenname,inputContedescription,inputContefile)
+    Sendcontent(props.isIdacaynt,"zxc",inputContenname,inputContedescription,inputContefile)
   }
   return (
     <div className="form-registere">

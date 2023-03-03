@@ -8,6 +8,7 @@ import Cookies from "js-cookie";
 import Kabinet from "./componets/Kabinet/Kabinet";
 import Contentadd from "./componets/Content/Contentadd/Contentadd";
 import { Route,Routes} from "react-router-dom";
+import Contentvisit from "./componets/Content/Contentvisit/Contentvisit";
 function App() {
   console.log()
   const[isLoggedIn,setisLoggedIn] = useState(false);
@@ -35,6 +36,7 @@ function App() {
       
       <Menunav isLoggedIn={isLoggedIn}/>
       <Routes>
+        <Route exact path='/contentvasit' element={<Contentvisit/>}/>
         <Route exact path='/' element={<Home ></Home>}/>
         <Route exact path='/login' element={<Loginform setisIdacaynt={setisIdacaynt} setispasword={setispasword} setisLoggedIn={setisLoggedIn} setisName={setisName} setisEmail={setisEmail}></Loginform>}/>
         <Route exact path='/register' element={<Registerform ></Registerform>}/>
