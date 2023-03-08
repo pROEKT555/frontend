@@ -58,7 +58,7 @@ const Contentadd = (props) =>{
         </div>
         <div className="registere-form__control">
           {/* <label>Ведіть пароль</label> */}
-          <input placeholder="Ведіть опис контенту" value={inputContedescription} onChange={ContentdescriptionChange} className="registere-form__input" type="password"></input> 
+          <input placeholder="Ведіть опис контенту" value={inputContedescription} onChange={ContentdescriptionChange} className="registere-form__input" type="text"></input> 
         </div>        
         <div className="registere-form__control">
           {/* <label>Ведіть пароль</label> */}
