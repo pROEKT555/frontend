@@ -5,6 +5,8 @@ import "./Testadd.css"
 const Testadd = (props) =>{
   const[isNametest,setisNametest] = useState("");
   const[isIdtest,setisIdtest] = useState("");
+  const[isquest,setisquest] = useState(false);
+  let rowquest =[]
   const Sendcontent =(authid,nametest)=>{
       axios.post('http://127.0.0.1:8000/test/', {
         author:authid,
@@ -18,6 +20,9 @@ const Testadd = (props) =>{
       });
     
   }
+  const Linktoaddquat = () =>{
+    setisquest(true)
+  }
   const TestnameChange =(event)=>{
     setisNametest(event.target.value);
   }
@@ -26,7 +31,35 @@ const Testadd = (props) =>{
     Sendcontent(props.isIdacaynt,isNametest)
     setisNametest('')
   }
-  if(isIdtest!==""){
+  if(isquest===true){
+    return(
+      <div className="question">
+       <h1>Додати запитання</h1>
+        <div className="row">
+        <div className="row-block">
+            <input type='text'></input>
+          </div>
+          <div className="row-block">
+            <input type='radio'name="contact" />
+            <input type='text'></input>
+          </div>
+          <div className="row-block">
+            <input type='radio'name="contact" />
+            <input type='text'></input>
+          </div>
+          <div className="row-block">
+            <input type='radio'name="contact" />
+            <input type='text'></input>
+          </div>
+          <div className="row-block">
+            <input type='radio'name="contact" />
+            <input type='text'></input>
+          </div>
+        </div>
+      </div>
+     
+    )
+  }else if(isIdtest!==""){
     return(
       <div className="form-registere">
       
@@ -34,9 +67,9 @@ const Testadd = (props) =>{
           <h1 className="form-registere-title">Дотати питання</h1>
           <div className="block">
             <label className="block_label">
-              <a className="block__a" href="./">
+              <button className="block__a" onClick={Linktoaddquat}>
                 <img src={img} alt="asd" className="block-a__img"></img>
-              </a>
+              </button>
               <h2 className="block__title">Додати запитання</h2>   
             </label>
           </div>
