@@ -1,5 +1,7 @@
 import { useState } from "react";
+import img from "./304947.svg"
 import axios from "axios";
+import "./Testadd.css"
 const Testadd = (props) =>{
   const[isNametest,setisNametest] = useState("");
   const[isIdtest,setisIdtest] = useState("");
@@ -30,12 +32,13 @@ const Testadd = (props) =>{
       
         <form className="form-registere__form" onSubmit={submitHandler} >
           <h1 className="form-registere-title">Дотати питання</h1>
-          <div className="registere-form__control registere-form__control-1">
-            {/* <label>Ведіть тесту</label> */}
-            <input placeholder="Ведіть назву тестa" value={isNametest} onChange={TestnameChange} className="registere-form__input"  type="text" ></input>
-          </div>     
-          <div className="registere-form__actions">
-            <button className="registere-form__actions__button" type="submit">Дотати</button>
+          <div className="block">
+            <label className="block_label">
+              <a className="block__a" href="./">
+                <img src={img} alt="asd" className="block-a__img"></img>
+              </a>
+              <h2 className="block__title">Додати запитання</h2>   
+            </label>
           </div>
         </form>
       </div>

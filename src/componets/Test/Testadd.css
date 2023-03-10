@@ -1,0 +1,25 @@
+.block{
+  border: dashed;
+  border-radius: 25px;
+  width: 600px;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: center;
+}
+.block-a__img{
+  width: 50px;
+  height: 50px;
+}
+.block_label{
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.block__a{
+ 
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
