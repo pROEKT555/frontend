@@ -3,57 +3,6 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Contentvisitscript from '../Contentvisitscript/Contentvisitscript';
 import { useState } from 'react';
-//   let item= [
-//     {
-//         "author_id": 1,
-//         "author_name": "zxc",
-//         "name": "zxc?",
-//         "descript": "Чому не варто звязуватися з zxc?",
-//         "files": "Томушо zxc це СФ!"
-//     },
-//     {
-//         "author_id": 1,
-//         "author_name": "zxc",
-//         "name": "zxc?",
-//         "descript": "Чому не варто звязуватися з zxc?",
-//         "files": "Томушо zxc це СФ!"
-//     },
-//     {
-//         "author_id": 1,
-//         "author_name": "zxc",
-//         "name": "zxc?",
-//         "descript": "Чому не варто звязуватися з zxc?",
-//         "files": "Томушо zxc це СФ!"
-//     },
-//     {
-//         "author_id": 1,
-//         "author_name": "zxc",
-//         "name": "a",
-//         "descript": "a",
-//         "files": "a"
-//     },
-//     {
-//         "author_id": 1,
-//         "author_name": "zxc",
-//         "name": "a",
-//         "descript": "a",
-//         "files": "a"
-//     },
-//     {
-//         "author_id": 2,
-//         "author_name": "guller",
-//         "name": "a",
-//         "descript": "a",
-//         "files": "a"
-//     },
-//     {
-//         "author_id": 2,
-//         "author_name": "guller",
-//         "name": "a",
-//         "descript": "a",
-//         "files": "a"
-//     }
-// ];
 
 const Contentvisit =() =>{
   const[inputitem,setInputitem] = useState([]);
@@ -67,7 +16,7 @@ const Contentvisit =() =>{
     console.log(error);
   });
   };
-  console.log(inputitem)
+
   fetchData()
   return(
     <div className='Contentvisit'>

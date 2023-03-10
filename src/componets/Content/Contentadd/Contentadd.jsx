@@ -46,6 +46,9 @@ const Contentadd = (props) =>{
     console.log(inputContenname,inputContedescription,inputContefile)
     event.preventDefault();
     Sendcontent(props.isIdacaynt,"zxc",inputContenname,inputContedescription,inputContefile)
+    setInputContefile('');
+    setInputContedescription('');
+    setInputContenname('');
   }
   return (
     <div className="form-registere">

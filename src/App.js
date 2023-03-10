@@ -9,6 +9,7 @@ import Kabinet from "./componets/Kabinet/Kabinet";
 import Contentadd from "./componets/Content/Contentadd/Contentadd";
 import { Route,Routes} from "react-router-dom";
 import Contentvisit from "./componets/Content/Contentvisit/Contentvisit";
+import Testadd from "./componets/Test/Testadd";
 function App() {
   console.log()
   const[isLoggedIn,setisLoggedIn] = useState(false);
@@ -42,6 +43,8 @@ function App() {
         <Route exact path='/register' element={<Registerform ></Registerform>}/>
         <Route exact path='/kabinet' setisLoggedIn={setisLoggedIn} element={<Kabinet isEmail={isEmail} isLoggedIn={isLoggedIn} isName={isName}></Kabinet>}/>
         <Route exact path='/contentadd'  isLoggedIn={isLoggedIn} element={<Contentadd isIdacaynt={isIdacaynt} ></Contentadd>}/>
+        <Route exact path='/contentadd'  isLoggedIn={isLoggedIn} element={<Contentadd isIdacaynt={isIdacaynt} ></Contentadd>}/>
+        <Route exact path='/test/add' element={<Testadd isIdacaynt={isIdacaynt}></Testadd>}/>
 
       </Routes>
     </div>
