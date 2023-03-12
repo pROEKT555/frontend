@@ -30,3 +30,7 @@
   flex-direction: column;
   align-items: center;
 }
+
+input:checked+span {
+  color: rgb(118, 187, 34);
+}

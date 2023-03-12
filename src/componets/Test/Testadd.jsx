@@ -40,20 +40,20 @@ const Testadd = (props) =>{
             <input type='text'></input>
           </div>
           <div className="row-block">
-            <input type='radio'name="contact" />
-            <input type='text'></input>
+            <input className="test-radio" type='radio'name="test" />
+            <input placeholder="Питання 1" type='text'></input>
           </div>
           <div className="row-block">
-            <input type='radio'name="contact" />
-            <input type='text'></input>
+            <input className="test-radio" type='radio'name="test" />
+            <input placeholder="Питання 2" type='text'></input>
           </div>
           <div className="row-block">
-            <input type='radio'name="contact" />
-            <input type='text'></input>
+            <input className="test-radio" type='radio'name="test" />
+            <input placeholder="Питання 3" type='text'></input>
           </div>
           <div className="row-block">
-            <input type='radio'name="contact" />
-            <input type='text'></input>
+            <input className="test-radio" type='radio'name="test" />
+            <input placeholder="Питання 4" type='text'></input>
           </div>
         </div>
       </div>
