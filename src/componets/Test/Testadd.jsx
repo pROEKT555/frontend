@@ -2,8 +2,8 @@
 import { useState } from "react";
 import img from "./304947.svg"
 import axios from "axios";
-import "./Testadd.css"
-
+import "./Testadd.css";
+import Testvisit from "../Testvisit/Testvisit";
 const Testadd = (props) =>{
   const[isNametest,setisNametest] = useState("");
   const[isIdtest,setisIdtest] = useState("");
@@ -173,6 +173,7 @@ const Testadd = (props) =>{
        }
       ])
     }
+    setisquest(false);
     console.log(isrowquest)
   }
 
@@ -217,6 +218,8 @@ const Testadd = (props) =>{
       
         <form className="form-registere__form" onSubmit={submitHandler} >
           <h1 className="form-registere-title">Дотати питання</h1>
+          <Testvisit test1={"dsasadasd"} test2={"Sadsdas"} test3={"asdasd"} test4={"isinputquest4"}  title={4} quzitrue={1}/>
+          {/* <Testvisit test1={isinputquest1} test2={isinputquest2} test3={isinputquest3} test4={isinputquest4}  title={isinputquest}/> */}
           <div className="block">
             <label className="block_label">
               <button className="block__a" onClick={Linktoaddquat}>
