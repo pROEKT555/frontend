@@ -13,7 +13,29 @@ const Testadd = (props) =>{
   const[isinputquest2,setisinputquest2] = useState("");
   const[isinputquest3,setisinputquest3] = useState("");
   const[isinputquest4,setisinputquest4] = useState("");
-  const[isrowquest,setrowquest]= useState([]);
+  const[isrowquest,setrowquest]= useState([{
+    "text": "asdasd",
+    "quzitrue":4,
+    "answ": [
+        {
+          "text": "jljkljkljljklj",
+          "is_true": false
+        },
+        {
+          "text": "hkhjkhjk",
+          "is_true": true
+        },
+        {
+          "text": "fghfghfhg",
+          "is_true": false
+        },
+        {
+          "text": "fghfghgfh",
+          "is_true": false
+        }
+        
+    ]
+  }]);
   const[isquest,setisquest] = useState(false);
   const ContentinputquestChange =(event)=>{
     console.log(event.target.value)
@@ -72,6 +94,7 @@ const Testadd = (props) =>{
       
         {
           "text": isinputquest,
+          "quzitrue":isinputradio,
           "answ": [
               {
                 "text": isinputquest1,
@@ -98,6 +121,7 @@ const Testadd = (props) =>{
       
         {
           "text": isinputquest,
+          "quzitrue":isinputradio,
           "answ": [
               {
                 "text": isinputquest1,
@@ -120,11 +144,12 @@ const Testadd = (props) =>{
         }
       ]);
     }else if(isinputradio==3){
-      console.log(123123)
+      
       setrowquest([...isrowquest,
       
         {
           "text": isinputquest,
+          "quzitrue":isinputradio,
           "answ": [
               {
                 "text": isinputquest1,
@@ -151,6 +176,7 @@ const Testadd = (props) =>{
       
         {
           "text": isinputquest,
+          "quzitrue":isinputradio,
           "answ": [
               {
                 "text": isinputquest1,
@@ -174,7 +200,7 @@ const Testadd = (props) =>{
       ])
     }
     setisquest(false);
-    console.log(isrowquest)
+    console.log(isrowquest[0].quzitrue)
   }
 
     
@@ -218,8 +244,11 @@ const Testadd = (props) =>{
       
         <form className="form-registere__form" onSubmit={submitHandler} >
           <h1 className="form-registere-title">Дотати питання</h1>
-          <Testvisit test1={"dsasadasd"} test2={"Sadsdas"} test3={"asdasd"} test4={"isinputquest4"}  title={4} quzitrue={1}/>
-          {/* <Testvisit test1={isinputquest1} test2={isinputquest2} test3={isinputquest3} test4={isinputquest4}  title={isinputquest}/> */}
+          {isrowquest.map((item, index) => (
+            <Testvisit key={index} test1={item.answ[0].text} test2={item.answ[1].text} test3={item.answ[2].text} test4={item.answ[3].text} title={item.text} quzitrue={item.quzitrue}/>
+          ))}
+          {/* <Testvisit test1={"dsasadasd"} test2={"Sadsdas"} test3={"asdasd"} test4={"isinputquest4"}  title={4} quzitrue={1}/> */}
+          {/* <Testvisit test1={isinputquest1} test2={isinputquest2} test3={isinputquest3} test4={isinputquest4}  title={isinputquest}  quzitrue={isinputradio}/> */}
           <div className="block">
             <label className="block_label">
               <button className="block__a" onClick={Linktoaddquat}>

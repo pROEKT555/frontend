@@ -1,43 +1,95 @@
+import "./Testvisit.css"
 const Testvisit = (props) =>{
-  let arr =[props.test1,props.test2,props.test3,props.test4]
   // eslint-disable-next-line no-unused-vars
-  const Visittesttop = () =>{
-    console.log(arr.length)
-    for(let x=1;x<=arr.length;x++){
-      console.log(x)
-      if(props.quzitrue==x){
-        console.log(false)
-        console.log(arr[x])
-        return(
-          <div className="content-block">
-            <div className="content-block-nameiuser"></div>
-            <div className="content-block-notrue">
-            {arr[x]}
-            </div>
-          </div>
-        );
-        console.log(44);
-      }else if(props.quzitrue!==x){
-        console.log(true)
-        console.log(arr[x])
-        return(
+  console.log(props.quzitrue)
+  if(props.quzitrue===1){
+      return(
         <div className="content-block">
-          <div className="content-block-nameiuser content-block-nameiuser-true">
-
+          <h2>{props.title}</h2>
+          <div className="content-block-nameiuser">
+            <div className="content-block-true"></div>
+            {props.test1}
           </div>
-          <div className="content-block-true">
-            {arr[x]}
+          <div className="content-block-nameiuser">
+            <div className="content-block-notrue"></div>
+            {props.test2}
           </div>
+          <div className="content-block-nameiuser">
+            <div className="content-block-notrue"></div>
+            {props.test3}
+          </div>
+          <div className="content-block-nameiuser">
+            <div className="content-block-notrue"></div>
+            {props.test4}
+          </div>
+      </div>
+    );
+  }else if(props.quzitrue===2){
+    return(
+      <div className="content-block">
+        <h2>{props.title}</h2>
+        <div className="content-block-nameiuser">
+          <div className="content-block-notrue"></div>
+          {props.test1}
         </div>
-        )
-      }
-    }
-  }
-  return(
-    <div className="content-block">
-      <h2>Назва тесту{props.title}</h2>
-      <Visittesttop></Visittesttop>
+        <div className="content-block-nameiuser">
+          <div className="content-block-true"></div>
+          {props.test2}
+        </div>
+        <div className="content-block-nameiuser">
+          <div className="content-block-notrue"></div>
+          {props.test3}
+        </div>
+        <div className="content-block-nameiuser">
+          <div className="content-block-notrue"></div>
+          {props.test4}
+        </div>
     </div>
-  )
+  );
+  }else if(props.quzitrue===3){
+      return(
+        <div className="content-block">
+          <h2>{props.title}</h2>
+          <div className="content-block-nameiuser">
+            <div className="content-block-notrue"></div>
+            {props.test1}
+          </div>
+          <div className="content-block-nameiuser">
+            <div className="content-block-notrue"></div>
+            {props.test2}
+          </div>
+          <div className="content-block-nameiuser">
+            <div className="content-block-true"></div>
+            {props.test3}
+          </div>
+          <div className="content-block-nameiuser">
+            <div className="content-block-notrue"></div>
+            {props.test4}
+          </div>
+      </div>
+    );
+  }else if(props.quzitrue===4){
+    return(
+      <div className="content-block">
+        <h2>{props.title}</h2>
+        <div className="content-block-nameiuser">
+          <div className="content-block-notrue"></div>
+          {props.test1}
+        </div>
+        <div className="content-block-nameiuser">
+          <div className="content-block-notrue"></div>
+          {props.test2}
+        </div>
+        <div className="content-block-nameiuser">
+          <div className="content-block-notrue"></div>
+          {props.test3}
+        </div>
+        <div className="content-block-nameiuser">
+          <div className="content-block-true"></div>
+          {props.test4}
+        </div>
+    </div>
+  );
+}
 };
 export default Testvisit;

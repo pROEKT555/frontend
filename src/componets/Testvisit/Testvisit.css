@@ -1,0 +1,18 @@
+.content-block-true{
+  width: 20px;
+  height: 20px;
+  background-color: #4caf50;
+  border-radius: 50%;
+}
+.content-block-notrue{
+  width: 20px;
+  height: 20px;
+  background-color: #d8d8d8;
+  border-radius: 50%;
+}
+.content-block-notrue,.content-block-true{
+  margin-right: 10px;
+}
+.content-block-nameiuser{
+  display: flex;
+}
