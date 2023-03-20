@@ -6,6 +6,7 @@ import "./Testadd.css";
 import Testvisit from "../Testvisit/Testvisit";
 const Testadd = (props) =>{
   const[isNametest,setisNametest] = useState("");
+  const[isNametest1,setisNametest1] = useState("asda");
   const[isIdtest,setisIdtest] = useState("");
   const[isinputradio,setisinputradio] = useState("");
   const[isinputquest,setisinputquest] = useState("");
@@ -62,10 +63,17 @@ const Testadd = (props) =>{
     console.log(event.target.value)
   }
   const Sendcontent =(authid,nametest)=>{
-      axios.post('http://127.0.0.1:8000/test/', [
+      console.log([
         {
           "author": authid,
           "name": nametest
+        },
+        ...isrowquest.map(x=>x)
+      ])
+      axios.post('http://127.0.0.1:8000/test/', [
+        {
+          "author": authid,
+          "name": nametest,
         },
         ...isrowquest.map(x=>x)
 
@@ -87,7 +95,7 @@ const Testadd = (props) =>{
   const submitHandler = (event) =>{
     event.preventDefault();
     setisIdtest(10)
-    setisNametest('')
+    
   }
   const submitHandler1 = (event) =>{
     event.preventDefault();
@@ -206,7 +214,8 @@ const Testadd = (props) =>{
     console.log(isrowquest[0].quzitrue)
   }
   const AddTestcontent=()=>{
-
+    console.log(isNametest)
+    Sendcontent(props.isIdacaynt,"asdasd")
   }
     
   if(isquest===true){
