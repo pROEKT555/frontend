@@ -14,29 +14,7 @@ const Testadd = (props) =>{
   const[isinputquest2,setisinputquest2] = useState("");
   const[isinputquest3,setisinputquest3] = useState("");
   const[isinputquest4,setisinputquest4] = useState("");
-  const[isrowquest,setrowquest]= useState([{
-    "text": "asdasd",
-    "quzitrue":4,
-    "answ": [
-        {
-          "text": "jljkljkljljklj",
-          "is_true": false
-        },
-        {
-          "text": "hkhjkhjk",
-          "is_true": true
-        },
-        {
-          "text": "fghfghfhg",
-          "is_true": false
-        },
-        {
-          "text": "fghfghgfh",
-          "is_true": false
-        }
-        
-    ]
-  }]);
+  const[isrowquest,setrowquest]= useState([]);
   const[isquest,setisquest] = useState(false);
   const ContentinputquestChange =(event)=>{
     console.log(event.target.value)
