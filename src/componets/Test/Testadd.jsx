@@ -65,7 +65,7 @@ const Testadd = (props) =>{
       axios.post('http://127.0.0.1:8000/test/', [
         {
           "author": authid,
-          "name": "nametest"
+          "name": nametest
         },
         ...isrowquest.map(x=>x)
 
