@@ -3,10 +3,11 @@ import { useState } from "react";
 import img from "./304947.svg"
 import axios from "axios";
 import "./Testadd.css";
+import { useNavigate } from "react-router-dom";
 import Testvisit from "../Testvisit/Testvisit";
 const Testadd = (props) =>{
+  const navigate = useNavigate();
   const[isNametest,setisNametest] = useState("");
-  const[isNametest1,setisNametest1] = useState("asda");
   const[isIdtest,setisIdtest] = useState("");
   const[isinputradio,setisinputradio] = useState("");
   const[isinputquest,setisinputquest] = useState("");
@@ -194,6 +195,7 @@ const Testadd = (props) =>{
   const AddTestcontent=()=>{
     console.log(isNametest)
     Sendcontent(props.isIdacaynt,isNametest)
+    navigate("/")
   }
     
   if(isquest===true){
