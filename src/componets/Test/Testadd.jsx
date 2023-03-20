@@ -215,7 +215,7 @@ const Testadd = (props) =>{
   }
   const AddTestcontent=()=>{
     console.log(isNametest)
-    Sendcontent(props.isIdacaynt,"asdasd")
+    Sendcontent(props.isIdacaynt,isNametest)
   }
     
   if(isquest===true){
