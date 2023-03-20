@@ -36,3 +36,31 @@
 input:checked+span {
   color: rgb(118, 187, 34);
 }
+.block__submit {
+  border: none;
+  background: #a89a8a;
+  background-image: -webkit-linear-gradient(top, #a89a8a, #c2af99);
+  background-image: -moz-linear-gradient(top, #a89a8a, #c2af99);
+  background-image: -ms-linear-gradient(top, #a89a8a, #c2af99);
+  background-image: -o-linear-gradient(top, #a89a8a, #c2af99);
+  background-image: linear-gradient(to bottom, #a89a8a, #c2af99);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  text-shadow: 0px 0px 0px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.block__submit:hover {
+  background: #a89a8a;
+  background-image: -webkit-linear-gradient(top, #a89a8a, #a88d6b);
+  background-image: -moz-linear-gradient(top, #a89a8a, #a88d6b);
+  background-image: -ms-linear-gradient(top, #a89a8a, #a88d6b);
+  background-image: -o-linear-gradient(top, #a89a8a, #a88d6b);
+  background-image: linear-gradient(to bottom, #a89a8a, #a88d6b);
+  text-decoration: none;
+}
