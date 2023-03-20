@@ -62,10 +62,14 @@ const Testadd = (props) =>{
     console.log(event.target.value)
   }
   const Sendcontent =(authid,nametest)=>{
-      axios.post('http://127.0.0.1:8000/test/', {
-        author:authid,
-        name:nametest,
-      })
+      axios.post('http://127.0.0.1:8000/test/', [
+        {
+          "author": authid,
+          "name": "nametest"
+        },
+        ...isrowquest.map(x=>x)
+
+      ])
       .then(function (response) {
         setisIdtest(response.data.id)
       })
@@ -82,14 +86,13 @@ const Testadd = (props) =>{
   }
   const submitHandler = (event) =>{
     event.preventDefault();
-    Sendcontent(props.isIdacaynt,isNametest)
+    setisIdtest(10)
     setisNametest('')
   }
   const submitHandler1 = (event) =>{
     event.preventDefault();
     // eslint-disable-next-line eqeqeq
     if(isinputradio==1){
-      console.log()
       setrowquest([...isrowquest,
       
         {
@@ -202,7 +205,9 @@ const Testadd = (props) =>{
     setisquest(false);
     console.log(isrowquest[0].quzitrue)
   }
+  const AddTestcontent=()=>{
 
+  }
     
   if(isquest===true){
     return(
@@ -245,7 +250,7 @@ const Testadd = (props) =>{
         <form className="form-registere__form" onSubmit={submitHandler} >
           <h1 className="form-registere-title">Дотати питання</h1>
           {isrowquest.map((item, index) => (
-            <Testvisit key={index} test1={item.answ[0].text} test2={item.answ[1].text} test3={item.answ[2].text} test4={item.answ[3].text} title={item.text} quzitrue={item.quzitrue}/>
+            <Testvisit key={index} test1={item.answ[0].text} test2={item.answ[1].text} test3={item.answ[2].text} test4={item.answ[3].text} title={item.text} quzitrue={Number(item.quzitrue)}/>
           ))}
           {/* <Testvisit test1={"dsasadasd"} test2={"Sadsdas"} test3={"asdasd"} test4={"isinputquest4"}  title={4} quzitrue={1}/> */}
           {/* <Testvisit test1={isinputquest1} test2={isinputquest2} test3={isinputquest3} test4={isinputquest4}  title={isinputquest}  quzitrue={isinputradio}/> */}
@@ -256,6 +261,13 @@ const Testadd = (props) =>{
               </button>
               <h2 className="block__title">Додати запитання</h2>   
             </label>
+          </div>
+          <div className="block-submit">
+            <label className="block_label">
+                <button className="block__submit"  onClick={AddTestcontent}>
+                Додати тест
+                </button>
+              </label>
           </div>
         </form>
       </div>
@@ -275,6 +287,7 @@ const Testadd = (props) =>{
             <button className="registere-form__actions__button" type="submit">Дотати</button>
           </div>
         </form>
+        
       </div>
     )
   }
