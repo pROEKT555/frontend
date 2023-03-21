@@ -203,28 +203,28 @@ const Testadd = (props) =>{
       <div className="question">
        <h1>Додати запитання</h1>
         <div className="row">
-        <form onSubmit={submitHandler1}>
+        <form onSubmit={submitHandler1} className='form-row'>
               <div className="row-block">
-                <input type='text' onChange={ContentinputquestChange} placeholder="Питання"></input>
+                <input className="block-title" type='text' onChange={ContentinputquestChange} placeholder="Питання"></input>
               </div>
               <div className="row-block">
                 <input className="test-radio" value="1" onChange={ContentradioChange} type='radio'name="test" />
-                <input placeholder="Відповідь 1" onChange={Contentinputquest1Change} type='text'></input>
+                <input className="block-title" placeholder="Відповідь 1" onChange={Contentinputquest1Change} type='text'></input>
               </div>
               <div className="row-block">
                 <input className="test-radio" value="2"  onChange={ContentradioChange} type='radio'name="test" />
-                <input placeholder="Відповідь 2" onChange={Contentinputquest2Change} type='text'></input>
+                <input className="block-title" placeholder="Відповідь 2" onChange={Contentinputquest2Change} type='text'></input>
               </div>
               <div className="row-block">
                 <input className="test-radio" value="3"  onChange={ContentradioChange} type='radio'name="test" />
-                <input placeholder="Відповідь 3" onChange={Contentinputquest3Change} type='text'></input>
+                <input className="block-title" placeholder="Відповідь 3" onChange={Contentinputquest3Change} type='text'></input>
               </div>
               <div className="row-block">
                 <input className="test-radio" value="4"  onChange={ContentradioChange} type='radio'name="test" />
-                <input placeholder="Відповідь 4" onChange={Contentinputquest4Change} type='text'></input>
+                <input className="block-title" placeholder="Відповідь 4" onChange={Contentinputquest4Change} type='text'></input>
               </div>
               <div className="row-block">
-                <button type="submit">Додати</button>
+                <button className="block__submit" type="submit">Додати</button>
               </div>
             </form>
             </div>

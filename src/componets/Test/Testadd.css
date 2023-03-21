@@ -64,3 +64,32 @@ input:checked+span {
   background-image: linear-gradient(to bottom, #a89a8a, #a88d6b);
   text-decoration: none;
 }
+.row-block{
+
+}
+.block-title {
+  margin-bottom: 5px;
+  padding: 5px;
+  font-size: 16px;
+  border-width: 1px;
+  border-color: #CCCCCC;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-style: solid;
+  border-radius: 0px;
+  box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+  text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}
+.block-title:focus {
+  outline:none;
+}
+.test-radio{
+  width: 15px;
+  height: 15px;
+}
+.form-row{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
