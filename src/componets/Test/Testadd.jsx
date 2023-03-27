@@ -78,117 +78,27 @@ const Testadd = (props) =>{
   }
   const submitHandler1 = (event) =>{
     event.preventDefault();
-    // eslint-disable-next-line eqeqeq
-    if(isinputradio==1){
-      setrowquest([...isrowquest,
-      
-        {
-          "text": isinputquest,
-          "quzitrue":isinputradio,
-          "answ": [
-              {
-                "text": isinputquest1,
-                "is_true": true
-              },
-              {
-                "text": isinputquest2,
-                "is_true": false
-              },
-              {
-                "text": isinputquest3,
-                "is_true": false
-              },
-              {
-                "text": isinputquest4,
-                "is_true": false
-              }
-              
-          ]
-       }
-      ]);
-    }else if(isinputradio==2){
-      setrowquest([...isrowquest,
-      
-        {
-          "text": isinputquest,
-          "quzitrue":isinputradio,
-          "answ": [
-              {
-                "text": isinputquest1,
-                "is_true": false
-              },
-              {
-                "text": isinputquest2,
-                "is_true": true
-              },
-              {
-                "text": isinputquest3,
-                "is_true": false
-              },
-              {
-                "text": isinputquest4,
-                "is_true": false
-              }
-              
-          ]
-        }
-      ]);
-    }else if(isinputradio==3){
-      
-      setrowquest([...isrowquest,
-      
-        {
-          "text": isinputquest,
-          "quzitrue":isinputradio,
-          "answ": [
-              {
-                "text": isinputquest1,
-                "is_true": false
-              },
-              {
-                "text": isinputquest2,
-                "is_true": false
-              },
-              {
-                "text": isinputquest3,
-                "is_true": true
-              },
-              {
-                "text": isinputquest4,
-                "is_true": false
-              }
-              
-          ]
-       }
-      ])
-    }else if(isinputradio==4){
-      setrowquest([...isrowquest,
-      
-        {
-          "text": isinputquest,
-          "quzitrue":isinputradio,
-          "answ": [
-              {
-                "text": isinputquest1,
-                "is_true": false
-              },
-              {
-                "text": isinputquest2,
-                "is_true": false
-              },
-              {
-                "text": isinputquest3,
-                "is_true": false
-              },
-              {
-                "text": isinputquest4,
-                "is_true": true
-              }
-              
-          ]
-       }
-      ])
-    }
+    setrowquest([...isrowquest,
+      {
+        "text": isinputquest,
+        "quzitrue":isinputradio,
+        "answ": [
+            {
+              "text": isinputquest1,
+            },
+            {
+              "text": isinputquest2,
+            },
+            {
+              "text": isinputquest3,
+            },
+            {
+              "text": isinputquest4,
+            }
+            
+        ]
+     }
+    ]);
     setisquest(false);
     console.log(isrowquest[0].quzitrue)
   }
