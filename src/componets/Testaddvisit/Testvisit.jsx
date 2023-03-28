@@ -86,7 +86,8 @@ const Testaddvisit = (props) =>{
         </div>
         <div className="content-block-nameiuser">
           <div className="content-block-true"></div>
-          {props.test4}
+          {props.test4}ї
+          
         </div>
     </div>
   );
