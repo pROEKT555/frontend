@@ -8,7 +8,7 @@ const Testvisit =( ) =>{
   const fetchData =  () => {
     axios.get('http://localhost:8000/test/')
     .then(response => {
-      console.log(response.data.test_output);
+      
       setInputitem(response.data.test_output);
     })
     .catch(error => {

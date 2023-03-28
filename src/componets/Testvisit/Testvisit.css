@@ -12,3 +12,17 @@
   border-radius: 5px;
   padding: 5px;
 }
+.Testvisit-row{
+  display: flex;
+}
+.test-block{
+  border-radius: 7px;
+  padding: 15px 10px;
+  margin-right: 5px;
+  background-color: #A99985;
+}
+.test-block-button{
+  border: none;
+  border-radius: 5px;
+  background-color: #E4E6EB;
+}
