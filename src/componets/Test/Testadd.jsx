@@ -4,7 +4,7 @@ import img from "./304947.svg"
 import axios from "axios";
 import "./Testadd.css";
 import { useNavigate } from "react-router-dom";
-import Testvisit from "../Testaddvisit/Testvisit";
+import Testvisit from "../Testaddvisit/Testaddvisit";
 const Testadd = (props) =>{
   const navigate = useNavigate();
   const[isNametest,setisNametest] = useState("");

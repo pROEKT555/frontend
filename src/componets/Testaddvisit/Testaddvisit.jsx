@@ -1,4 +1,4 @@
-import "./Testvisit.css"
+import "./Testaddvisit.css"
 const Testaddvisit = (props) =>{
   // eslint-disable-next-line no-unused-vars
   console.log(props.quzitrue)
