@@ -105,7 +105,7 @@ const Testadd = (props) =>{
   const AddTestcontent=()=>{
     console.log(isNametest)
     Sendcontent(props.isIdacaynt,isNametest)
-    navigate("/")
+    navigate("/test")
   }
     
   if(isquest===true){
