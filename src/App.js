@@ -10,6 +10,7 @@ import Contentadd from "./componets/Content/Contentadd/Contentadd";
 import { Route,Routes} from "react-router-dom";
 import Contentvisit from "./componets/Content/Contentvisit/Contentvisit";
 import Testadd from "./componets/Test/Testadd";
+import Testvisit from "./componets/Testvisit/Testvisit";
 function App() {
   console.log()
   const[isLoggedIn,setisLoggedIn] = useState(false);
@@ -45,7 +46,7 @@ function App() {
         <Route exact path='/contentadd'  isLoggedIn={isLoggedIn} element={<Contentadd isIdacaynt={isIdacaynt} ></Contentadd>}/>
         <Route exact path='/contentadd'  isLoggedIn={isLoggedIn} element={<Contentadd isIdacaynt={isIdacaynt} ></Contentadd>}/>
         <Route exact path='/test/add' element={<Testadd isIdacaynt={isIdacaynt}></Testadd>}/>
-
+        <Route exact path='/test' element={<Testvisit></Testvisit>}/>
       </Routes>
     </div>
   );
