@@ -1,5 +1,5 @@
 import "./Testvisit.css"
-const Testvisit = (props) =>{
+const Testaddvisit = (props) =>{
   // eslint-disable-next-line no-unused-vars
   console.log(props.quzitrue)
   if(props.quzitrue===1){
@@ -92,4 +92,4 @@ const Testvisit = (props) =>{
   );
 }
 };
-export default Testvisit;
+export default Testaddvisit;
